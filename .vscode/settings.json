@@ -1,0 +1,6 @@
+{
+    "editor.fontFamily": "Victor Mono, Consolas, 'Courier New', monospace",
+    "python.analysis.extraPaths": [
+        "./Blog/routers"
+    ]
+}
