@@ -30,8 +30,6 @@ def create_blog(request : BlogModel, db: Session = Depends(get_db) ,current_user
     if not user:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="User not found")
     
-    # user = db.query(User).filter(User.email == current_user.username).first()
-
     new_blog = Blog (title = request.title, body = request.body, user_id = user.id)  
     db.add (new_blog)
     db.commit()
